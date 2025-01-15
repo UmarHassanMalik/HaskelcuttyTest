@@ -1,0 +1,26 @@
+cabal-version:      3.0
+
+name:               Cutty
+version:            0.1.0.0
+license:            BSD-3-Clause
+license-file:       LICENSE
+author:             Umar Hassan Malik
+maintainer:         umarhassanmalik15@gmail.com
+build-type:         Simple
+extra-doc-files:    CHANGELOG.md
+
+-- Remove library section if no library code
+-- library
+--   exposed-modules:     -- Specify any library modules here if applicable
+--   build-depends:       base >= 4.7 && < 5
+
+executables:
+  Cutty
+    main-is:             app/Main.hs
+    build-depends:
+        base >= 4.7 && < 5,
+        criterion,
+        parallel
+    hs-source-dirs:   app
+    default-language: Haskell2010
+    ghc-options:        -Wall
